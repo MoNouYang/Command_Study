@@ -1,0 +1,54 @@
+git 在安装git bash 运用后简单多了
+
+首先是在本地建立一个仓库，在当前文件夹下，用 
+git init
+建立仓库，这个文件夹下就是仓库的根目录
+右键点击打开后，进入该目录，可以看到有一个后缀【master】
+
+本地和git在未连接时各自处理自己的文件夹，也就是仓库
+所谓的添加，删除，更新都是在各自的文件夹操作
+
+git add -A 或者 git add 文件名+文件后缀
+将文件加到暂存区【类似于车站的候车厅】
+
+git有点繁琐的是【很严谨】：要对操作进行说明
+也就是我push上传到GitHub前要对该次操作说明
+git commit -m "填写说明"
+
+之后我们就可以连接上传了
+
+由于本地有很多仓库，本地与GitHub的对接要确定仓库临时运用名
+我们之前那个init只是建立仓库而已，没有名字
+
+很直白，远程 添加 名称 连接地址
+git remote add xxxx git@github.com:MoNouYang/Internet_Security_Level_Protection.git
+
+这个xxxx就是本地仓库名
+后面那个链接地址是ssh的运用，最好不要用https,因为那玩意要连接要输入账户，密码【GitHub的】
+成功后，使用 git remote -v
+查询是否已连接，有出现提示就是有，没有任何反映就是不行
+
+
+建立连接后，重新验证暂存区有东西不
+git status
+
+英文挺简单的，应该没问题
+
+之后就 push上去就可以了
+
+git push -u xxxx master
+
+xxxx就是仓库名
+
+master 是主干，之后也可以选择分支
+
+如果是自己的，可以是可以强制将文件上传到GitHub上，当然GitHub上
+会更新成你本地的情况【通常需要强制就说明，GitHub上和本地有点不一样的文件】
+
+当然，如果本地没问题就强制吧
+也就可以先git pull xxxx
+把GitHub上先拉下来【下载的意思】
+在这基础上修改就不会提示出错而使用强制去完成修改
+
+git push -u xxxx master -f
+
