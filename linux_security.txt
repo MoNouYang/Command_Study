@@ -1,0 +1,5 @@
+1.
+环境变量遵循大写：PATH=$PATH:$HOME/bin
+在自己的home下面建立bin目录后，将路径写入环境变量
+
+永久将该路径直接写入.profile【在home的用户文件夹下】
