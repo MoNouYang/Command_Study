@@ -12,3 +12,10 @@ yum是rpm的升级版，依赖关系不需要再处理
 https://blog.csdn.net/hzy3344520/article/details/104625919/
 rpm简述，步骤说明：
 http://blog.chinaunix.net/uid-23069658-id-3944462.html
+
+
+
+源代码-》
+make：包-》
+rpm/deb：直接安装-》
+yum：打包安装
